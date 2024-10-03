@@ -1,0 +1,628 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open sans';
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color:#964B00;
+    --cream-color:#F5F5F5;
+    --deep-green: #2E865F;
+}
+
+body{
+    background-color: var(--cream-color);
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--cream-color);
+    height: 80px;
+}
+
+header .logo img{
+    width: 200px;
+    margin-left: 20px;
+    border-radius: 8px;
+}
+
+header .nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-size: 23px;
+}
+
+header .nav ul li{
+    cursor: pointer;
+    position: relative;
+}
+
+header .nav ul li:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--cream-color);
+    width: 0%;
+    height: 2px;
+    transition: all 0.5s;
+}
+
+header .nav ul li:hover::before{
+    width: 100%;
+}
+header .nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+header .buttons input{
+    height:28px;
+    border: 0;
+    outline: 0;
+    width: 200px;
+    padding: 0 12px;
+}
+
+header .buttons{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+header .buttons button{
+    font-size: 18px;
+    padding: 4px 12px;
+    border: 0;
+    outline: 0;
+    border-radius: 8px;
+    color: var(--cream-color);
+    cursor: pointer;
+}
+#search{
+    background-color: black;
+}
+#Signup , #cart{
+    background-color: var(--cream-color);
+    color: var(--primary-color);
+}
+#cart{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 5px 18px;
+}
+
+
+#login{
+    background-color: blue;
+}
+
+#count{
+    background-color: var(--primary-color);
+    color: var(--cream-color);
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.login {
+    position: absolute;
+    background-color: #fff;
+    width: 350px;
+    height: 350px;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+.signup{
+    position: absolute;
+    background-color: #fff;
+    width: 350px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+.login i , .signup i{
+    font-size: 23px;
+    margin: 18px 0;
+    cursor: pointer;
+}
+
+.login h2 , .signup h2{
+    font-size: 32px;
+}
+
+.login form , .signup form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.login form input ,.signup form input{
+    width: 320px;
+    height: 38px;
+    outline: 0;
+    margin-top: 12px;
+    padding: 2px 13px;
+}
+
+.login form button , .signup form button{
+    background-color: blue;
+    color: white;
+    padding: 7px 37px;
+    border-radius: 8px;
+    font-size: 15px;
+    border: 0;
+    outline: 0;
+}
+
+.cart{
+    width: 28%;
+    position: absolute;
+    right: 12px;
+    top: 80px;
+    background-color: #353432;
+    display: none;
+    color: var(--cream-color);
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    overflow: auto;
+}
+
+.items{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.cart::-webkit-scrollbar{
+    width: 0px;
+}
+
+.checkout{
+    width: 100%;
+}
+
+.checkout button{
+    width: 100%;
+    background-color: #E8BC0E;
+    border: 0;
+    font-size: 23px;
+    padding: 5px 12px;
+    cursor: pointer;
+}
+
+.item{
+    width: 100%;
+}
+
+.item .item-img img{
+    width: 80px;
+}
+
+.items:nth-child(even){
+    background-color: #555;
+}
+
+.item .item-quantity span{
+    display: inline-flex;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    color: #555;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.item .item-quantity span:nth-child(2){
+    background-color: transparent;
+    color: #fff;
+}
+
+.cart i{
+    cursor: pointer;
+    margin-top: 12px;
+    font-size: 23px;
+    text-align: center;
+}
+
+.head{
+    background-color: var(--primary-color);
+    color: var(--cream-color);
+    padding: 5px 12px;
+}
+.foot{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 12px;
+    gap: 20px;
+    border-top: 2px solid var(--primary-color);
+
+}
+
+
+.hero{
+    background-image: url(./assets/bc3.png);
+    height:calc(100vh - 80px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--cream-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 8%;
+}
+
+.hero h1{
+    font-size: 45px;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.hero button{
+    width: 200px;
+    font-size: 18px;
+    padding: 7px 15px;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#title{
+    text-align: center;
+    font-size: 34px;
+    margin-top: 50px;
+    font-weight: light;
+}
+
+#brown-color{
+    color: var(--primary-color);
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 25px;
+}
+
+.main .left img{
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.main .right {
+    width: 50%;
+}
+
+.main .right h1{
+    font-weight: 400;
+    font-size: 34px;
+
+}
+
+.main .right button {
+    font-size: 18px;
+    padding: 6px 40px;
+    margin: 20px 40px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: all 0.5s;
+}
+.about .main .right button:hover{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.categories .main img{
+    width: 350px;
+    border-radius: 8px;
+    transition: transform 0.5s;
+
+}
+.categories .main img:hover{
+    transform: translateY(-20px);
+}
+
+.menu .main{
+    gap: 20px;
+    margin: 100px; 
+}
+
+.menu-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    width: 300px;
+    font-size: 23px;
+    color: var(--primary-color);
+    transition: transform 0.5s;
+}
+.menu-item:hover{
+    transform: translateY(-20px);
+    transform: scale(1.05);
+}
+
+hr{
+    border: 1px solid var(--primary-color);
+    margin: 0 100px;
+}
+
+.menu-item img{
+    width: 250px;
+}
+
+.price{
+    display: flex;
+    gap: 180px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.categories .menu-item{
+
+    margin-top: 50px;
+    background: white;
+}
+
+.categories .menu-item img{
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    margin-top: 30px;
+}
+
+
+.categories .menu-item .prices{
+    margin-top: 30px;
+}
+
+.gallary .main {
+    margin: 20px 50px;
+}
+
+.contactus{
+    background-color: #fff;
+    margin: 65px 120px;
+    border-radius: 8px;
+}
+
+.usmain {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.usmain .usleft{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.usleft h1{
+    font-weight: 700;
+    font-size: 35px;
+    margin-bottom: 8px;
+
+}
+.usleft p{
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 23px;
+}
+
+.usleft input{
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid var(--primary-color);
+    height: 34px;
+    padding: 12px;
+    margin-bottom: 23px;
+    font-size: 18px;
+}
+
+.usleft button{
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    padding:7px 12px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.usleft button:hover{
+    color: var(--primary-color);
+    background-color: #fff;
+}
+
+.usmain .usright {
+    width: 300px;
+    height: 100;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: var(--primary-color);
+}
+
+.uscard {
+    position: absolute;
+    background-color: black;
+    border-radius: 8px;
+    color: #fff;
+    top: 20%;
+    right: 10%;
+    width: 400px;
+}
+
+.uscard p{
+    margin: 20px 0;
+    margin-left: 5px;
+}
+
+.uscard p i{
+    margin-right: 5px;
+}
+
+.blogs .menu-item {
+    width: 400px;
+    color: black;
+    display: block;
+}
+
+.blogs .main{
+    margin: 0 30px;
+    margin-bottom: 30px;
+}
+
+.blogs .menu-item  img{
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    object-fit: cover;
+}
+.blogs .menu-item:hover{
+    transform: translateY(0);
+}
+.blogs .menu-item img:hover{
+    transform: scale(1);
+}
+
+.blogs .menu-item h3{
+    margin: 8px 8px;
+}
+
+.blogs .menu-item p{
+    font-size: 18px;
+    margin: 8px 8px;
+}
+
+.blogs .menu-item button{
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 0;
+    outline: 0;
+    margin: 8px 8px;
+    padding: 8px 60px;
+    cursor: pointer;
+}
+
+
+footer{
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+footer .logo img{
+    margin-top: 20px;
+    width: 250px;
+    border-radius: 8px;
+}
+
+
+footer .icons{
+    color: white;
+}
+
+footer .icons i{
+    padding: 12px;
+    border-radius: 8px;
+    background-color: black;
+    cursor: pointer;
+}
+
+#white{
+    color: white;
+}
+#arrow{
+    width: 50px;
+    position: fixed;
+    right: 10px;
+    bottom: 6px;
+    cursor: pointer;
+    scroll-behavior: smooth;
+}
+
+.menu-item p i{
+    cursor: pointer;
+}
+
+@media (max-width:680px) {
+    header .nav ul li a, header .buttons input{
+        display: none;
+    }
+    header{
+        justify-content: center;
+        gap: 0;
+    }
+
+    header .logo img{
+        width: 90px;
+    }
+    header .buttons button{
+        padding: 2px 3px;
+        margin: 0;
+        font-size: 15px;
+    }
+    .main .left img{
+        width: 340px;
+    }
+    .main .right{
+        width: 90%;
+    }
+    .usmain .usright{
+        width: 0px;
+        height: 0px;
+    }
+    .contactus{
+        margin: 0;
+        width: 90%;
+    }
+    .uscard{
+        display: none;
+    }
+    .gallary .main img{
+        width: 100%;
+    }
+    #arrow{
+        right: 15px;
+    }
+
+    .cart{
+        width: 40%;
+    }
+}

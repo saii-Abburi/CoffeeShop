@@ -1,0 +1,16 @@
+<i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-facebook-f"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-youtube"></i>
+      <i class="fa-brands fa-pinterest-p"></i>
+<i class="fa-regular fa-envelope">
+<i class="fa-solid fa-phone">
+<i class="fa-solid fa-building-columns"></i> 
+<i class="fa-solid fa-cart-shopping"></i>
+<i class="fa-solid fa-cart-shopping"></i>
+<i class="fa-regular fa-star"></i>
+
+
+
+1. Open Sans (main font)
+2. Playfair Display (title font)

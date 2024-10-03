@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Coffee",
+        "price": 99,
+        "image": "./assets/m1.png"
+    },
+    {
+        "id": 2,
+        "name": "Coffee",
+        "price": 90,
+        "image": "./assets/m2.png"
+    },
+    {
+        "id": 3,
+        "name": "Coffee",
+        "price": 110,
+        "image": "./assets/m3.png"
+    },
+    {
+        "id": 4,
+        "name": "Coffee",
+        "price": 95,
+        "image": "./assets/m4.png"
+    },
+    {
+        "id": 5,
+        "name": "Coffee",
+        "price": 100,
+        "image": "./assets/m5.png"
+    },
+    {
+        "id": 6,
+        "name": "Coffee",
+        "price": 105,
+        "image": "./assets/m6.png"
+    },
+    {
+        "id": 7,
+        "name": "Coffee",
+        "price": 92,
+        "image": "./assets/m7.png"
+    },
+    {
+        "id": 8,
+        "name": "Coffee",
+        "price": 108,
+        "image": "./assets/m8.png"
+    }
+]

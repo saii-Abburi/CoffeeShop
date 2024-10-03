@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe-Mart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./assets/logo.png" alt="logo">
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#product">Product</a></li>
+                <li><a href="#gallary">Gallary</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+            </ul>
+        </div>
+        <div class="buttons">
+            <input type="text" placeholder="search">
+            <button id="search">Search</button>
+            <button id="login" onclick="displayForm()">Login</button>
+            <button id="Signup" onclick="displaySignup()">Signup</button>
+            <button id="cart" onclick="displayCart()"><i class="fa-solid fa-cart-shopping"></i>
+            </button>
+        </div>
+    </header>
+    <div class="login">
+        <i class="fa-solid fa-xmark" id="toggle" onclick="hideForm()"></i>
+        <form action="">
+            <h2>Login</h2>
+            <input type="text" placeholder="username" required>
+            <input type="text" placeholder="password" required>
+            <button>Login</button>
+        </form>
+    </div>
+    <div class="signup">
+        <i class="fa-solid fa-xmark" id="toggle" onclick="hideSignup()"></i>
+        <form action="">
+            <h2>Signup</h2>
+            <input type="text" placeholder="E-mail" required>
+            <input type="text" placeholder="username" required>
+            <input type="text" placeholder="password" required>
+            <button>Signup</button>
+        </form>
+    </div>
+    <div class="cart">
+        <i class="fa-solid fa-xmark" id="toggle" onclick="hideCart()"></i>
+        <div class="head">
+            <p>My Cart</p>
+        </div>
+        <div class="cartitem">
+            <p>Your Cart is empty</p>
+        </div>
+        <div class="item">
+            <div class="items">
+                <!-- <div class="item-img">
+                    <img src="./assets/m1.png">
+                </div>
+                <div class="item-name">
+                    COFFEE
+                </div>
+                <div class="item-price">
+                    $100
+                </div>
+                <div class="item-quantity">
+                    <span class="minus"><</span>
+                    <span class="itemQuantity">1</span>
+                    <span class="plus">></span>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="foot">
+            <h3>Total</h3>
+            <h2 id="total">$0.00</h2>
+            <div class="checkout"><button>Check Out</button></div>
+        </div>
+
+    </div>
+
+    <section class="hero" id="hero">
+        <h1>Start Your Day With A Fresh Coffee</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi placeat nisi, eum, vitae ullam</p>
+        <a href="#menu"><button>Shop Now</button></a>
+    </section>
+
+
+    <section class="about" id="about">
+        <h1 id="title">About <span id="brown-color">Us</span></h1>
+        <div class="main">
+            <div class="left"><img src="./assets/about.png" width="400px" height="300px"></div>
+            <div class="right">
+                <h1>What Makes Our Coffee Special?</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, cumque iusto rem consectetur
+                    in placeat facere, neque non eius corrupti rerum debitis officia officiis tempora dignissimos
+                    laborum praesentium veniam odit.
+                </p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, cumque iusto rem consectetur
+                    in placeat facere, neque non eius corrupti rerum debitis officia officiis tempora dignissimos
+                    laborum praesentium veniam odit.
+                </p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, cumque iusto rem consectetur
+                    in placeat facere, neque non eius corrupti rerum debitis officia officiis tempora dignissimos
+                    laborum praesentium veniam odit.
+                </p>
+                <button>Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <a href="#hero"> <img src="./assets/up-arrow.png" id="arrow"></a>
+
+    <section class="categories">
+        <h1 id="title">Top <span id="brown-color">Categories</span></h1>
+        <div class="main">
+            <img src="./assets/c1.png" alt="">
+            <img src="./assets/c2.png" alt="">
+            <img src="./assets/c3.png" alt="">
+        </div>
+    </section>
+
+    <section class="menu" id="menu">
+        <h1 id="title"><span id="brown-color">Menu</span></h1>
+        <hr>
+        <div class="main" id="listcart">
+
+            <!-- Reference -->
+            <!-- <div class="menu-item">
+                <img src="./assets/m1.png" alt="">
+                <p id="brown-color"><i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </p>
+                <p><span id="brown-color">Coffee</span></p>
+                <div class="price">
+                    <p>$99</p>
+                    <p><i class="fa-solid fa-cart-shopping"></i></p>
+                </div>
+            </div> -->
+
+
+        </div>
+    </section>
+
+    <section class="categories products" id="product">
+        <h1 id="title">Top <span id="brown-color">Products</span></h1>
+        <hr>
+        <div class="main">
+            <div class="menu-item">
+                <img src="./assets/arabica coffee.png" alt="">
+                <p><span id="brown-color">Arbica Coffee</span></p>
+                <div class="price">
+                    <p>$99 </p>
+                    <p><i class="fa-solid fa-cart-shopping"></i></p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="./assets/Decaf caffee.png" alt="">
+                <p><span id="brown-color">Decaf Coffee</span></p>
+                <div class="price">
+                    <p>$99 <span id="stirke">$100</span></p>
+                    <p><i class="fa-solid fa-cart-shopping"></i></p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="./assets/Black Coffee.png" alt="">
+                <p><span id="brown-color">Black Coffee</span></p>
+                <div class="price">
+                    <p>$99 </p>
+                    <p><i class="fa-solid fa-cart-shopping"></i></p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="./assets/Cappuccino coffee.png" alt="">
+                <p><span id="brown-color">Cappuccino Coffee</span></p>
+                <div class="price">
+                    <p>$99 </p>
+                    <p><i class="fa-solid fa-cart-shopping"></i></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories gallary" id="gallary">
+        <h1 id="title">Our <span id="brown-color">Gallary</span></h1>
+        <div class="main">
+            <img src="./assets/image1.png" alt="">
+            <img src="./assets/image2.png" alt="">
+            <img src="./assets/image3.png" alt="">
+            <img src="./assets/image4.png" alt="">
+            <img src="./assets/image5.png" alt="">
+            <img src="./assets/image6.png" alt="">
+        </div>
+    </section>
+
+    <section class="contactus">
+        <div class="usmain">
+            <div class="usleft">
+                <h1>Contact<span id="brown-color">Us</span></h1>
+                <p>Lorem ipsum dolor sit, amet <br> consectetur adipisicing
+                    elit. Quos quod illo necessitatibus.
+                </p>
+                <input type="text" required placeholder="Name">
+                <input type="email" required placeholder="Email">
+                <input type="text" required placeholder="Number">
+                <button id="message">Send Message</button>
+            </div>
+            <div class="uscard">
+                <p>Info</p>
+                <p><i class="fa-regular fa-envelope"></i> cafemart.contact@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +91 9876543210</p>
+                <p><i class="fa-solid fa-building-columns"></i>Brodipet , Guntur</p>
+            </div>
+            <div class="usright">
+
+            </div>
+        </div>
+    </section>
+
+    <section class="categories blogs" id="blogs">
+        <h1 id="title">Latest <span id="brown-color">Blogs</span></h1>
+        <div class="main">
+            <div class="menu-item">
+                <img src="./assets/b1.png" alt="">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p id="brown-color">Admin / 6 March 2020</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, non qui! Blanditiis fugit
+                    aliquid distinctio!</p>
+                <button>Read More</button>
+            </div>
+            <div class="menu-item">
+                <img src="./assets/b1.png" alt="">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p id="brown-color">Admin / 6 March 2020</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, non qui! Blanditiis fugit
+                    aliquid distinctio!</p>
+                <button>Read More</button>
+            </div>
+            <div class="menu-item">
+                <img src="./assets/b1.png" alt="">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p id="brown-color">Admin / 6 March 2020</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, non qui! Blanditiis fugit
+                    aliquid distinctio!</p>
+                <button>Read More</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo">
+            <img src="./assets/logo.png" alt="">
+        </div>
+        <div class="icons">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+        </div>
+        <p><span id="white">Designed By </span>Sai Abburi</p>
+        <p>All Copyrights resevered</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
